@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LearnMVP</string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="simple_notes">Simple Notes</string>
+    <string name="logout">Logout</string>
+    <string name="add_your_notes_here">Add your notes here...</string>
+    <string name="add_note">Add Note</string>
+</resources>

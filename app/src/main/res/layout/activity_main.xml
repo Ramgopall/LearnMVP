@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fafafa">
+
+    <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52sdp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:padding="@dimen/_10sdp"
+                android:tint="@color/blue_start"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="sans-serif"
+                android:text="@string/simple_notes"
+                android:textColor="@color/blue_start"
+                android:textSize="@dimen/_16sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogout"
+                android:layout_width="82dp"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/red_border"
+                android:text="@string/logout"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginEnd="@dimen/_8sdp"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardAddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llHeader"
+            android:layout_margin="@dimen/_8sdp"
+            app:cardElevation="2dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:hint="@string/add_your_notes_here"
+                    android:maxLines="5"
+                    android:minLines="3"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/green_gradient"
+                    android:text="@string/add_note"
+                    android:textAllCaps="false"
+                    android:theme="@style/PrimaryButton" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardAddNote"
+            android:layout_margin="@dimen/_4sdp"
+            tools:listitem="@layout/notes" />
+
+</RelativeLayout>
